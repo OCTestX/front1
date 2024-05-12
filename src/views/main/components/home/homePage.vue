@@ -1,5 +1,10 @@
 <!-- eslint-disable vue/no-parsing-error -->
 <script setup lang="ts">
+function clk() {
+  console.log("click");
+  
+  window.open("https://mp.weixin.qq.com/s?__biz=Mzg3Njg5ODE0Mg==&mid=2247495225&idx=2&sn=a4078846f0b2c3b30d3e567476e1b58e&chksm=ce78a45fabb831e8c4aa6ba8ab407a8531d1ddea45dc43b2c6f57d02981ae5b6d70a33666b40&xtrack=1&scene=0&subscene=267&sessionid=1715504626")
+}
 </script>
 
 <template>
@@ -7,25 +12,26 @@
     <el-container>
       <el-main>
         <!-- 轮播图 -->
-        <h1>五四精神传薪火，激扬青春献祖国---------我校开展五四文艺汇演活动</h1>
-          <el-carousel height="200px" motion-blur>
-          <el-carousel-item :key="1"> 
-            <img src="/public/static/54主持人.jpg" style="width:100%;" alt="">
+        <el-carousel class="carousel" indicator-position="none" motion-blur>
+          <el-carousel-item class="carousel-item" :key="1">
+            <el-text class="carousel-title">五四精神传薪火，激扬青春献祖国---------我校开展五四文艺汇演活动</el-text>
+            <img class="carousel-img" src="/public/static/54主持人.jpg" alt="" @click="clk"/>
           </el-carousel-item>
-          <el-carousel-item :key="2"> 
-            <img src="/public/static/goiden-hour.png" style="width:100%;" alt="">
-           </el-carousel-item>
-          <el-carousel-item :key="3"> 
-            <img src="/public/static/年少有为.png" style="width:100%;" alt="">
+          <el-carousel-item class="carousel-item" :key="2">
+            <el-text class="carousel-title">五四文艺汇演<span class="carousel-title-span">Golden Hour</span></el-text>
+            <img class="carousel-img" src="/public/static/goiden-hour.png" alt="" @click="clk"/>
           </el-carousel-item>
-          <el-carousel-item :key="4">
-            <img src="/public/static/敦煌.png" style="width:100%;" alt="">
+          <el-carousel-item class="carousel-item" :key="3">
+            <el-text class="carousel-title">五四文艺汇演<span class="carousel-title-span">年少有为</span></el-text>
+            <img class="carousel-img" src="/public/static/年少有为.png" alt="" @click="clk"/>
           </el-carousel-item>
-          <el-carousel-item :key="5"> 
-            <img src="/public/static/逆光.png"  style="width:100%;" alt="">
+          <el-carousel-item class="carousel-item" :key="4">
+            <el-text class="carousel-title">五四文艺汇演<span class="carousel-title-span">敦煌</span></el-text>
+            <img class="carousel-img" src="/public/static/敦煌.png" alt="" @click="clk"/>
           </el-carousel-item>
-          <el-carousel-item :key="6"> 
-            <img src="/public/static/54主持人.jpg" style="width:100%;" alt="">
+          <el-carousel-item class="carousel-item" :key="5">
+            <el-text class="carousel-title">五四文艺汇演<span class="carousel-title-span">逆光</span></el-text>
+            <img class="carousel-img" src="/public/static/逆光.png" alt="" @click="clk"/>
           </el-carousel-item>
         </el-carousel>
       </el-main>
@@ -33,4 +39,21 @@
   </main>
 </template>
 
-<style></style>
+<style scoped>
+.carousel {
+  
+}
+.carousel-item {
+}
+.carousel-img {
+  width: 100%;
+  height: 200px;
+}
+.carousel-title {
+  font-size: large;
+}
+.carousel-title-span {
+  color: #337ecc;
+  font-size: x-large;
+}
+</style>
