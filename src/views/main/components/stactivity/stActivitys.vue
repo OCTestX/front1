@@ -44,6 +44,7 @@ function navGdws() {
 
 <style scoped>
 .stCard {
+  
   height: 200px;
   width: 165px;
 }
