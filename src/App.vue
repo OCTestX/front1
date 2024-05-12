@@ -9,6 +9,7 @@ import { RouterView } from 'vue-router'
     </el-main>
     <el-footer>
       备案信息: xxxxxxxx
+      <p> 版权所有©潮州暨实高级中学</p>
     </el-footer>
   </el-container>
 </template>
