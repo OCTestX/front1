@@ -10,6 +10,7 @@
 import { ref, watch, onMounted } from 'vue'
 
 const props = defineProps(['text'])
+
 const typedChars = ref('')
 const index = ref(0)
 
