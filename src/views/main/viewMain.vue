@@ -2,6 +2,7 @@
 import { ref, type Ref } from 'vue'
 import home from './components/home/homePage.vue'
 import stActivitys from './components/stactivity/stActivitys.vue'
+import newsCenter from './components/news/newsCenter.vue'
 import type { TabsPaneContext } from 'element-plus';
 import homeImg from './assets/title.png'
 
@@ -23,6 +24,7 @@ function getBananelImg(): string {
 }
 
 const bannalImgUrl = ref(getBananelImg())
+
 </script>
 
 <template>
@@ -43,7 +45,11 @@ const bannalImgUrl = ref(getBananelImg())
       <el-tab-pane label="社团活动" name="st">
         <stActivitys class="anim1" />
       </el-tab-pane>
-      <el-tab-pane label="新闻中心" name="news">Role</el-tab-pane>
+      <el-tab-pane label="新闻中心" name="news">
+        <!-- 试一试高德地图 -->
+        <newsCenter/>
+        <div id="container" style="height: 50vh; width: 100%"></div>
+      </el-tab-pane>
       <el-tab-pane label="暨实风采" name="jscolors">Task</el-tab-pane>
     </el-tabs>
   </main>
@@ -70,4 +76,4 @@ const bannalImgUrl = ref(getBananelImg())
     transform: translateY(0);
   }
 }
-</style>
+</style>mapmap
