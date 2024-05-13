@@ -3,35 +3,34 @@ import { ref, type Ref } from 'vue'
 import home from './components/home/homePage.vue'
 import stActivitys from './components/stactivity/stActivitys.vue'
 import newsCenter from './components/news/newsCenter.vue'
-import type { TabsPaneContext } from 'element-plus';
+import aboutPage from './components/about/aboutPage.vue'
+import type { TabsPaneContext } from 'element-plus'
 import homeImg from './assets/title.png'
 
 //默认选中的菜单索引
-const activeName: Ref<string| number | undefined> = ref('home')
+const activeName: Ref<string | number | undefined> = ref('home')
 
 //选中菜单触发的回调
 const handleClick = (tab: TabsPaneContext, event: Event) => {
   activeName.value = tab.paneName
   console.log(activeName.value)
-  
 }
 function getBananelImg(): string {
-  if (activeName.value =="home") return homeImg
-  else if (activeName.value == "st") return homeImg
-  else if (activeName.value == "news") return homeImg
-  else if (activeName.value == "jscolors") return homeImg
+  if (activeName.value == 'home') return homeImg
+  else if (activeName.value == 'st') return homeImg
+  else if (activeName.value == 'news') return homeImg
+  else if (activeName.value == 'jscolors') return homeImg
   return homeImg
 }
 
 const bannalImgUrl = ref(getBananelImg())
-
 </script>
 
 <template>
   <main class="main">
     <el-space direction="vertical">
-      <el-image class="titleImg" :src="bannalImgUrl" fit = "scale-down" />
-    <!-- <el-menu :default-active="activeIndex" class="nav" mode="horizontal" @select="handleSelect">
+      <el-image class="titleImg" :src="bannalImgUrl" fit="scale-down" />
+      <!-- <el-menu :default-active="activeIndex" class="nav" mode="horizontal" @select="handleSelect">
       <el-menu-item index="home">首页</el-menu-item>
       <el-menu-item index="st">社团</el-menu-item>
       <el-menu-item index="news">新闻中心</el-menu-item>
@@ -40,17 +39,22 @@ const bannalImgUrl = ref(getBananelImg())
     </el-space>
     <el-tabs v-model="activeName" class="demo-tabs" @tab-click="handleClick">
       <el-tab-pane label="首页" name="home">
-        <home class="anim1"/>
+        <home class="anim1" />
       </el-tab-pane>
       <el-tab-pane label="社团活动" name="st">
         <stActivitys class="anim1" />
       </el-tab-pane>
       <el-tab-pane label="新闻中心" name="news">
         <!-- 试一试高德地图 -->
-        <newsCenter/>
+        <newsCenter />
         <div id="container" style="height: 50vh; width: 100%"></div>
       </el-tab-pane>
-      <el-tab-pane label="暨实风采" name="jscolors">Task</el-tab-pane>
+      <el-tab-pane label="暨实风采" name="jscolors">
+        <aboutPage />
+      </el-tab-pane>
+      <el-tab-pane label="关于暨实" name="about">
+        <aboutPage />
+      </el-tab-pane>
     </el-tabs>
   </main>
 </template>
@@ -76,4 +80,5 @@ const bannalImgUrl = ref(getBananelImg())
     transform: translateY(0);
   }
 }
-</style>mapmap
+</style>
+mapmap
