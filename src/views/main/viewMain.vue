@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref, type Ref } from 'vue'
 import home from './components/home/homePage.vue'
+import jsnav from './components/jsnav/jsnavPage.vue'
 import stActivitys from './components/stactivity/stActivitys.vue'
 import newsCenter from './components/news/newsCenter.vue'
 import aboutPage from './components/about/aboutPage.vue'
@@ -37,9 +38,15 @@ const bannalImgUrl = ref(getBananelImg())
       <el-menu-item index="jscolors">暨实风采</el-menu-item>
     </el-menu> -->
     </el-space>
+    <!-- <el-affix :offset="120">
+      <el-button type="primary">Offset top 120px</el-button>
+    </el-affix> -->
     <el-tabs v-model="activeName" class="demo-tabs" @tab-click="handleClick">
       <el-tab-pane label="首页" name="home">
         <home class="anim1" />
+      </el-tab-pane>
+      <el-tab-pane label="暨实向导" name="jsnav">
+        <jsnav class="anim1" />
       </el-tab-pane>
       <el-tab-pane label="社团活动" name="st">
         <stActivitys class="anim1" />

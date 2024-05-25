@@ -3,7 +3,7 @@ import { RouterView } from 'vue-router'
 </script>
 
 <template>
-  <el-container>
+  <el-container class="container">
     <el-main>
       <RouterView class="anim1"/>
     </el-main>
@@ -15,6 +15,11 @@ import { RouterView } from 'vue-router'
 </template>
 
 <style scoped>
+.container {
+  position: relative;
+  height: 100%;
+}
+
 .anim1 {
   animation: fadeInDown2 0.5s both;
 }
