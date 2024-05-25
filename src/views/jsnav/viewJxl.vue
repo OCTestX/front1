@@ -1,10 +1,5 @@
 <script setup lang="ts">
 import { ref, type Ref } from 'vue'
-import router from '@/router';
-
-function navJxl() {
-  router.push({path: "jsnav/jxl"})
-}
 </script>
 
 <template>
@@ -13,18 +8,12 @@ function navJxl() {
       <div class="navMain">
         <img class="mainImg" src="/static/assets/js-bird-look.jpg" alt="" />
         <div class="actionDiv">
-          <el-button type="primary" class="jxl" @click="navJxl">教学楼</el-button>
-          <el-button type="primary" class="lt">礼堂</el-button>
-          <el-button type="primary" class="st">食堂</el-button>
-          <el-button type="primary" class="ssl-man">宿舍楼</el-button>
-          <el-button type="primary" class="ssl-woman">宿舍楼</el-button>
-          <el-button type="primary" class="cs">操场</el-button>
+          <el-button type="primary" class="jxl">教学楼</el-button>
+          
         </div>
       </div>
       <div class="content">
         <img class="background1" src="/static/assets/school1.jpeg" alt="" />
-        <el-text class="text-1" type="primary">潮州暨实</el-text>
-        <el-link class="baidubaike" href="https://baike.baidu.com/item/%E6%BD%AE%E5%B7%9E%E5%B8%82%E6%9A%A8%E5%AE%9E%E9%AB%98%E7%BA%A7%E4%B8%AD%E5%AD%A6/62025984" target="_blank" icon="TopRight">百度百科</el-link>
       </div>
     </el-space>
   </main>
