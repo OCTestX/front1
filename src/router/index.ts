@@ -33,6 +33,22 @@ const router = createRouter({
       // which is lazy-loaded when the route is visited.
       component: () => import('../views/jsnav/viewJxl.vue')
     },
+    {
+      path: '/jsnav/lt',
+      name: 'jsnav-lt',
+      // route level code-splitting
+      // this generates a separate chunk (About.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import('../views/jsnav/viewLt.vue')
+    },
+    {
+      path: '/jsnav/cc',
+      name: 'jsnav-cc',
+      // route level code-splitting
+      // this generates a separate chunk (About.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import('../views/jsnav/viewCc.vue')
+    },
   ]
 })
 

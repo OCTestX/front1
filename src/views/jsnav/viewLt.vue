@@ -1,16 +1,5 @@
 <script setup lang="ts">
 import { ref, type Ref } from 'vue'
-import router from '@/router';
-
-function navJxl() {
-  router.push({path: "jsnav/jxl"})
-}
-function navLt() {
-  router.push({path: "jsnav/lt"})
-}
-function navCc() {
-  router.push({path: "jsnav/cc"})
-}
 </script>
 
 <template>
@@ -19,18 +8,12 @@ function navCc() {
       <div class="navMain">
         <img class="mainImg" src="/static/assets/js-bird-look.jpg" alt="" />
         <div class="actionDiv">
-          <el-button type="primary" class="jxl" @click="navJxl">教学楼</el-button>
-          <el-button type="primary" class="lt" @click="navLt">礼堂</el-button>
-          <el-button type="primary" class="st">食堂</el-button>
-          <el-button type="primary" class="ssl-man">宿舍楼</el-button>
-          <el-button type="primary" class="ssl-woman">宿舍楼</el-button>
-          <el-button type="primary" class="cs" @click="navCc">操场</el-button>
+          <el-button type="primary" class="jxl">lt</el-button>
+          
         </div>
       </div>
       <div class="content">
         <img class="background1" src="/static/assets/school1.jpeg" alt="" />
-        <el-text class="text-1" type="primary">潮州暨实</el-text>
-        <el-link class="baidubaike" href="https://baike.baidu.com/item/%E6%BD%AE%E5%B7%9E%E5%B8%82%E6%9A%A8%E5%AE%9E%E9%AB%98%E7%BA%A7%E4%B8%AD%E5%AD%A6/62025984" target="_blank" icon="TopRight">百度百科</el-link>
       </div>
     </el-space>
   </main>
@@ -44,8 +27,8 @@ function navCc() {
 
 .jxl {
   position: absolute; /* 使按钮相对于父元素定位 */
-  top: 82%; /* 根据需要调整位置 */
-  left: 25%; /* 根据需要调整位置 */
+  top: 42%; /* 根据需要调整位置 */
+  left: 29%; /* 根据需要调整位置 */
 }
 .lt {
   position: absolute; /* 使按钮相对于父元素定位 */
@@ -91,6 +74,8 @@ function navCc() {
   position: absolute;
   top: 0%;
   left: 25%;
+  padding-left: 5px;
+  padding-right: 5px;
   box-shadow: 12px 12px 5px rgba(0, 0, 0, 0.3);
   border: 2px solid black;
   text-shadow:
@@ -99,9 +84,6 @@ function navCc() {
     3px 3px var(--el-color-danger-dark-2),
     4px 4px var(--el-color-danger-dark-2),
     5px 5px var(--el-color-danger-dark-2);
-
-    padding-left: 5px;
-    padding-right: 5px;
 }
 .baidubaike {
   font-size: x-large;
