@@ -1,4 +1,4 @@
-name: GitHub Actions Build and Deploy Demo        # 大标题
+name: GitHub Actions Build and Deploy        # 大标题
 on:
   push:
     branches:
