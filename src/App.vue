@@ -4,9 +4,7 @@ import { RouterView } from 'vue-router'
 
 <template>
   <el-container class="container">
-    <el-main>
-      <RouterView class="anim1"/>
-    </el-main>
+    <RouterView class="anim1"/>
     <el-footer>
       备案信息: xxxxxxxx
       <p> 版权所有©潮州暨实高级中学</p>
@@ -17,6 +15,7 @@ import { RouterView } from 'vue-router'
 <style scoped>
 .container {
   position: relative;
+  width: 100%;
   height: 100%;
 }
 

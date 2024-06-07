@@ -1,37 +1,43 @@
 <script setup lang="ts">
 import { ref, type Ref } from 'vue'
+import cdf from "./components/cdF3.vue"
+import { serverStaticAssetsAddress } from "@/Conf"
+import NewItem from "./components/NewsItem.vue"
 
+const imageUrls = [
+  serverStaticAssetsAddress+"img.png",
+  serverStaticAssetsAddress+"img.png",
+  serverStaticAssetsAddress+"img.png",
+];
 
 </script>
 
 <template>
   <main class="main">
-    <el-space direction="vertical">
-      
+    <el-space direction="vertical" style="width: 100%;">
+      <cdf :images="imageUrls"/>
+      <img src="./assets/title.png" class="title"/>
+      <h1 class="tag">暨实 · 资讯</h1>
+
+      <el-space warp style="width: 100%;">
+        <NewItem :background-image-url="serverStaticAssetsAddress+'img.png'" text=""/>
+        <NewItem :background-image-url="serverStaticAssetsAddress+'img.png'" text=""/>
+        <NewItem :background-image-url="serverStaticAssetsAddress+'img.png'" text=""/>
+        <NewItem :background-image-url="serverStaticAssetsAddress+'img.png'" text=""/>
+      </el-space>
     </el-space>
   </main>
 </template>
 
 <style scoped>
-.el-image.titleImg {
-  height: 100px;
+.title {
+  width: 300px;
+  position: absolute;
+  top: 0px;
+  left: 10px;
 }
-.el-menu.nav {
-  flex: 1;
-}
-.anim1 {
-  animation: fadeInDown2 0.5s both;
-}
-/* 定义淡入效果 */
-@keyframes fadeInDown2 {
-  from {
-    opacity: 0;
-    transform: translateY(-10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.tag {
+  font-weight: bold;
+  font-size: xx-large;
 }
 </style>
-mapmap
