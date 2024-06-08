@@ -19,11 +19,11 @@ const imageUrls = [
       <img src="./assets/title.png" class="title"/>
       <h1 class="tag">暨实 · 资讯</h1>
 
-      <el-space warp style="width: 100%;">
-        <NewItem :background-image-url="serverStaticAssetsAddress+'img.png'" text=""/>
-        <NewItem :background-image-url="serverStaticAssetsAddress+'img.png'" text=""/>
-        <NewItem :background-image-url="serverStaticAssetsAddress+'img.png'" text=""/>
-        <NewItem :background-image-url="serverStaticAssetsAddress+'img.png'" text=""/>
+      <el-space warp>
+        <NewItem :background-image-url="serverStaticAssetsAddress+'img.png'" text="" class="newsItem"/>
+        <NewItem :background-image-url="serverStaticAssetsAddress+'img.png'" text="" class="newsItem"/>
+        <NewItem :background-image-url="serverStaticAssetsAddress+'img.png'" text="" class="newsItem"/>
+        <NewItem :background-image-url="serverStaticAssetsAddress+'img.png'" text="" class="newsItem"/>
       </el-space>
     </el-space>
   </main>
@@ -39,5 +39,8 @@ const imageUrls = [
 .tag {
   font-weight: bold;
   font-size: xx-large;
+}
+.newsItem {
+  height: 100px;
 }
 </style>
