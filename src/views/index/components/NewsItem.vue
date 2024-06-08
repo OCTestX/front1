@@ -23,11 +23,11 @@
   <style scoped>
   .rounded-container {
     position: relative;
-    width: 175px;
+    width: 150px;
     height: 75px;
   }
   .bg {
-    width: 175px;
+    width: 150px;
     height: 75px;
   }
   .title {
