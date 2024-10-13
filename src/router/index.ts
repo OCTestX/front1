@@ -4,14 +4,19 @@ import ViewMain from '../views/main/viewMain.vue'
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
+    // {
+    //   path: '/',
+    //   name: 'index',
+    //   component: () => import('../views/index/viewIndex.vue')
+    // },
+    // {
+    //   path: '/home',
+    //   name: 'home',
+    //   component: ViewMain
+    // },
     {
       path: '/',
-      name: 'index',
-      component: () => import('../views/index/viewIndex.vue')
-    },
-    {
-      path: '/home',
-      name: 'home',
+      name: 'main',
       component: ViewMain
     },
     {
